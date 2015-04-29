@@ -1,0 +1,12 @@
+<?php foreach($art as $v):?>
+<div class="panel panel-default">
+    <div class="panel-heading"><a href="<?php echo site_url('a/'.$v['aid'])?>"><?php echo $v['title']?></a></div>
+    <div class="panel-body"><?php echo $v['info']?></div>
+</div>
+<?php endforeach ?>
+
+<nav>
+    <ul class="pager">
+        <?php echo $links?>
+    </ul>
+</nav>

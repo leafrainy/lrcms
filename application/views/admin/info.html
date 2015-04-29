@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" href="<?php echo base_url() ?>style/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="<?php echo base_url() ?>style/assets/css/admin.css">
+  
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+ 
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>概览</small></div>
+    </div>
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <table class="am-table am-table-bd am-table-striped admin-content-table">
+          <tbody>
+          <tr><td>1</td><td>用户名</td><td><?php echo $this->session->userdata('username')?></td>
+          </tr>
+          <tr><td>2</td><td>登陆时间</td><td><?php echo date('Y-m-d',$this->session->userdata('logintime'))?></td>
+          </tr>
+          <tr><td>3</td><td>客户端IP</td><td><?php echo $this->input->ip_address()?></td>
+          </tr>
+          <tr><td>4</td><td>服务器环境</td><td><?php echo $this->input->server('SERVER_SOFTWARE')?></td>
+          </tr>
+          <tr><td>5</td><td>PHP版本</td><td><?php echo PHP_VERSION?></td>
+          </tr>
+          <tr><td>6</td><td>服务器IP</td><td><?php echo $this->input->server('SERVER_ADDR')?></td>
+          </tr>
+          <tr><td>7</td><td>数据库信息</td><td><?php echo mysql_get_server_info()?></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/polyfill/rem.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/polyfill/respond.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="<?php echo base_url() ?>style/assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="<?php echo base_url() ?>style/assets/js/app.js"></script>
+</body>
+</html>

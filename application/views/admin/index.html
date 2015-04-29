@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LRNote管理后台</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="<?php echo base_url() ?>style/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="<?php echo base_url() ?>style/assets/css/admin.css">
+  <base target="iframe"/>
+  
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>Amaze UI</strong> <small>LRNote管理后台</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li><a href="<?php echo site_url('admin/admin/info')?>"><span class="am-icon-home"></span> 首页</a></li>
+        <li><a href="<?php echo site_url('admin/article/send_article')?>"><span class="am-icon-file"></span> 发表文章</a></li>
+        <li><a href="<?php echo site_url('admin/article/index')?>" class="am-cf"><span class="am-icon-check"></span>查看文章</a></li>
+        <li><a href="<?php echo site_url('admin/category/add_cate')?>"><span class="am-icon-puzzle-piece"></span>添加栏目</a></li>
+        <li><a href="<?php echo site_url('admin/category/index')?>"><span class="am-icon-th"></span>查看栏目</a></li>
+        <li><a href="<?php echo site_url()?>" target="_blank"><span class="am-icon-calendar"></span>前台首页</a></li>
+        <li><a href="<?php echo site_url('admin/admin/info')?>"><span class="am-icon-bug"></span>系统信息</a></li>
+        <li><a href="<?php echo site_url('admin/admin/change')?>"><span class="am-icon-table"></span>密码修改</a></li>
+        <li><a href="<?php echo site_url('admin/login/login_out')?>" target="_blank"><span class="am-icon-sign-out"></span> 注销</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+	<iframe   frameborder="0" scrolling="yes"  height="500px" width="100%" name="iframe" src="<?php echo site_url('admin/admin/info')?>"></iframe>
+  </div>
+  <!-- content end -->
+
+</div>
+
+<a class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2015 LRNote.All Rights Reserved.Powerd by Leafrainy.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/polyfill/rem.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/polyfill/respond.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="<?php echo base_url() ?>style/assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url() ?>style/assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="<?php echo base_url() ?>style/assets/js/app.js"></script>
+
+</body>
+</html>

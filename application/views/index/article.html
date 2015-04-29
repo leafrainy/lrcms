@@ -1,0 +1,11 @@
+<?php $this->load->view('index/head.html')?>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3><?php echo $article[0]['title']?></h3>
+        <span><small>发表于：<?php echo date('Y-m-d H:i:s',$article[0]['time'])?>，分类:<?php echo $article[0]['cname']?></small></span>
+        </div>
+    <div class="panel-body"><?php echo $article[0]['content']?></div>
+</div>
+
+<?php $this->load->view('index/foot.html')?>
